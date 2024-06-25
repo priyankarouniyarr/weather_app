@@ -62,15 +62,15 @@ class WeatherModel {
     } else if (condition < 400) {
       return  'images/background_sunny.jpg';
     } else if (condition < 600) {
-      return  'images/background_sunny.jpg';
+      return  'images/light ranning.jpg';
     } else if (condition < 700) {
       return  'images/background_sunny.jpg';
     } else if (condition < 800) {
-      return  'images/background_sunny.jpg';
+      return  'images/Sandstorm,Duststorm,Sand,Dust.jpg';
     } else if (condition == 800) {
-      return  'images/background_sunny.jpg';
+      return  'images/sunny_background.jpg';
     } else if (condition <= 804) {
-      return  'images/background_sunny.jpg';
+      return  'images/Cloudy_sky_.jpg';
     } else {
       return 'images/location_background.jpg';
     }
