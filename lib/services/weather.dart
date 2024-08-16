@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:clima_flutter/services/location.dart';
 import 'package:clima_flutter/services/networking.dart';
@@ -43,7 +42,7 @@ class WeatherModel {
     } else if (condition1 < 700) {
       return '☃️';
     } else if (condition1 < 800) {
-      return '🌫';
+      return '☀️';
     } else if (condition1 == 800) {
       return '☀️';
     } else if (condition1 <= 804) {
@@ -55,24 +54,24 @@ class WeatherModel {
 
    String getWeatherBG() {
     if(condition == 0){
-       return 'images/location_background.jpg';
+       return 'images/Cloudy_sky_.jpg';
     }
     else if (condition < 300) {
-      return 'images/background_sunny.jpg';
+      return 'images/bg.jpg';
     } else if (condition < 400) {
-      return  'images/background_sunny.jpg';
+      return  'images/bg.jpg';
     } else if (condition < 600) {
       return  'images/light ranning.jpg';
     } else if (condition < 700) {
       return  'images/background_sunny.jpg';
     } else if (condition < 800) {
-      return  'images/Sandstorm,Duststorm,Sand,Dust.jpg';
+      return  'images/bg.jpg';
     } else if (condition == 800) {
-      return  'images/sunny_background.jpg';
+      return  'images/bg.jpg';
     } else if (condition <= 804) {
-      return  'images/Cloudy_sky_.jpg';
+      return  'images/bg.jpg';
     } else {
-      return 'images/location_background.jpg';
+      return 'images/bg.jpg';
     }
   }
 
@@ -80,11 +79,11 @@ class WeatherModel {
     if (temp > 25) {
       return 'It\'s 🍦 time';
     } else if (temp > 20) {
-      return 'Time for shorts and 👕';
+      return 'Cloudy weather';
     } else if (temp < 10) {
       return 'You\'ll need 🧣 and 🧤';
     } else {
-      return 'Bring a 🧥 just in case';
+      return 'Raining Weather';
     }
   }
 }

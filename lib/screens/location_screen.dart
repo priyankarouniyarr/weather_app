@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:clima_flutter/utilities/constants.dart';
 import 'package:clima_flutter/services/weather.dart';
+import 'package:flutter/widgets.dart';
 import'city_screen.dart';
 class LocationScreen extends StatefulWidget {
   
@@ -47,13 +48,16 @@ class _LocationScreenState extends State<LocationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+       
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(weather.getWeatherBG()),
+            image: AssetImage(weather.getWeatherBG(),
+            ),
+            fit:BoxFit.cover,
             //if one img then
-            fit: BoxFit.cover,
+           
             colorFilter: ColorFilter.mode(
-                Colors.white.withOpacity(0.8), BlendMode.dstATop),
+                Colors.white.withOpacity(0.9), BlendMode.dstATop),
           ),
         ),
         constraints: BoxConstraints.expand(),
@@ -73,7 +77,7 @@ class _LocationScreenState extends State<LocationScreen> {
                                           },
                     child: Icon(
                       Icons.near_me,
-                      size: 50.0,
+                      size: 40.0,
                     ),
                   ),
                   GestureDetector(
@@ -87,9 +91,12 @@ class _LocationScreenState extends State<LocationScreen> {
                       updateUi(weatherdata);
                     }
                     },
-                    child: Icon(
-                      Icons.location_city,
-                      size: 50.0,
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Icon(
+                        Icons.location_city,
+                        size: 50.0,
+                      ),
                     ),
                   ),
                 ],
